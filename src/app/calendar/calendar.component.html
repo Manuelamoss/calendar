@@ -1,6 +1,31 @@
-<mat-form-field>
-    <input matInput [matDatepicker]="myDatepicker" [matDatepickerFilter]="dateFilter"/>
-  
-    <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
-    <mat-datepicker #myDatepicker startView="month" ></mat-datepicker>
-  </mat-form-field>
+
+
+
+<mat-grid-list cols="4" rowHeight="100px" colspan="4" role="list" >
+    <mat-grid-tile >
+            
+            <mat-form-field>
+                    
+                <input  matInput [matDatepicker]="myDatepicker" [matDatepickerFilter]="dateFilter"  />
+                
+                <mat-datepicker #myDatepicker  opened="true" [startAt]="jan" ></mat-datepicker>
+            
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile >
+            
+            
+                <mat-form-field>
+                        
+                  <input  matInput [matDatepicker]="myDatepicker1" [matDatepickerFilter]="dateFilter"  />
+                  
+                  <mat-datepicker #myDatepicker1  opened="true"  [startAt]="fev" ></mat-datepicker>
+                
+                </mat-form-field>
+            
+              
+    </mat-grid-tile>
+    
+</mat-grid-list>
+
+
