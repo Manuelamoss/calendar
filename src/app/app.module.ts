@@ -18,12 +18,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {OverlayModule} from '@angular/cdk/overlay';
+import { CalendarHeaderComponent } from './calendar-header/calendar-header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
+    CalendarHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
     ReactiveFormsModule,
     MatInputModule,
     MatGridListModule,
+    OverlayModule
     
   ],
   providers: [],

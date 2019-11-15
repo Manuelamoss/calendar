@@ -1,25 +1,25 @@
 
 
 
-<mat-grid-list cols="4" rowHeight="100px" colspan="4" role="list" >
+<mat-grid-list cols="2"   >
     <mat-grid-tile >
             
-            <mat-form-field>
+            <mat-form-field appearance="none">
                     
-                <input  matInput [matDatepicker]="myDatepicker" [matDatepickerFilter]="dateFilter"  />
+                <input  matInput [matDatepicker]="myDatepicker" [matDatepickerFilter]="myFilter" overflow= "hidden" appearance="none"/>
                 
-                <mat-datepicker #myDatepicker  opened="true" [startAt]="jan" ></mat-datepicker>
+                <mat-datepicker #myDatepicker  opened="true" [startAt]="jan" [dateClass]="myFilter" ngbDatepicker></mat-datepicker>
             
               </mat-form-field>
             </mat-grid-tile>
             <mat-grid-tile >
             
             
-                <mat-form-field>
+                <mat-form-field appearance="none"> 
                         
-                  <input  matInput [matDatepicker]="myDatepicker1" [matDatepickerFilter]="dateFilter"  />
+                  <input  matInput [matDatepicker]="myDatepicker1" [matDatepickerFilter]="myFilter"  />
                   
-                  <mat-datepicker #myDatepicker1  opened="true"  [startAt]="fev" ></mat-datepicker>
+                  <mat-datepicker #myDatepicker1  opened="true" [dateClass]="myFilter" [startAt]="fev" ngbDatepicker></mat-datepicker>
                 
                 </mat-form-field>
             
