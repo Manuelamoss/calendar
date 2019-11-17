@@ -1,31 +1,29 @@
 
-
-
-<mat-grid-list cols="2"   >
+<mat-grid-list cols="4"  style="width: 90%"  >
     <mat-grid-tile >
-            
-            <mat-form-field appearance="none">
-                    
-                <input  matInput [matDatepicker]="myDatepicker" [matDatepickerFilter]="myFilter" overflow= "hidden" appearance="none"/>
-                
-                <mat-datepicker #myDatepicker  opened="true" [startAt]="jan" [dateClass]="myFilter" ngbDatepicker></mat-datepicker>
-            
-              </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile >
-            
-            
-                <mat-form-field appearance="none"> 
-                        
-                  <input  matInput [matDatepicker]="myDatepicker1" [matDatepickerFilter]="myFilter"  />
-                  
-                  <mat-datepicker #myDatepicker1  opened="true" [dateClass]="myFilter" [startAt]="fev" ngbDatepicker></mat-datepicker>
-                
-                </mat-form-field>
-            
-              
+      <mat-form-field appearance="none">
+        <input  matInput [matDatepicker]="myDatepicker" [matDatepickerFilter]="myFilter"/>
+        <mat-datepicker #myDatepicker  opened="true" [startAt]="jan" [dateClass]="myFilter" ></mat-datepicker>
+      </mat-form-field>
     </mat-grid-tile>
-    
+    <mat-grid-tile >
+       <mat-form-field appearance="none">    
+        <input  matInput [matDatepicker]="myDatepicker1" [matDatepickerFilter]="myFilter"/>
+        <mat-datepicker #myDatepicker1  opened="true" [dateClass]="myFilter" [startAt]="fev" id="firsCalendar"></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile >
+        <mat-form-field appearance="none">
+          <input  matInput [matDatepicker]="myDatepicker2" [matDatepickerFilter]="myFilter"/>
+          <mat-datepicker #myDatepicker2  opened="true" [startAt]="mar" [dateClass]="myFilter" id="firsCalendar" ></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile >
+         <mat-form-field appearance="none">    
+          <input  matInput [matDatepicker]="myDatepicker3" [matDatepickerFilter]="myFilter"/>
+          <mat-datepicker #myDatepicker3  opened="true" [dateClass]="myFilter" [startAt]="apr" id="firsCalendar"></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
 </mat-grid-list>
 
 

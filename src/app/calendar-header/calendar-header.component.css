@@ -1,0 +1,22 @@
+.header-border{
+border: 1px solid #000;
+width: 50%;
+margin-left: 12%;
+margin-top: 1%;
+height: 60%; 
+}
+
+#btn_s{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20%;
+}
+
+.inputText{
+    
+    text-align: center;
+    align-items: flex-start;
+    border: none;
+
+}

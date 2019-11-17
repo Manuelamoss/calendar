@@ -10,7 +10,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatInputModule } from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 
@@ -18,8 +18,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {OverlayModule} from '@angular/cdk/overlay';
+import {OverlayModule, OverlayContainer} from '@angular/cdk/overlay';
 import { CalendarHeaderComponent } from './calendar-header/calendar-header.component';
+import { InAppRootOverlayContainer } from './app.in-app-root-overlay-container';
+
 
 
 @NgModule({
@@ -45,7 +47,7 @@ import { CalendarHeaderComponent } from './calendar-header/calendar-header.compo
     OverlayModule
     
   ],
-  providers: [],
+  providers: [{ provide: OverlayContainer, useClass: InAppRootOverlayContainer },{provide: MAT_DATE_LOCALE, useValue: 'pt-PT'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

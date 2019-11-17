@@ -16,6 +16,8 @@ export class CalendarComponent {
  @ViewChild(MatDatepicker, {static: false}) datepicker: MatDatepicker<Date>;
  jan = new Date(2019, 0, 1);
  fev = new Date(2019, 1, 1);
+ mar = new Date(2019, 2, 1);
+ apr = new Date(2019, 3, 1);
 
  @Input() header:any = null;
  
@@ -23,19 +25,20 @@ export class CalendarComponent {
  myFilter = (d: Date) => {
   const day = d.getDay();
   // Prevent Saturday and Sunday from being selected.
-  return day !== 0 && day !== 6 ? undefined :  'example-custom-date-class';
+  
+  //return day !== 0 && day !== 6 ? undefined :  'example-custom-date-class';
+if (day == 0){
+  return 'example-custom-date-class';
+}
+if (day == 6){
+return 'example-custom-date-class1';
+}
+
   }
-  // local reference varible of datepicker input
+  // bank holidays reference varible of datepicker input
+ 
 
 
-// listen to document click event and handle closeDponOutsideClick event
-/*@HostListener('window:click', ['$event'])
-closeDponOutsideClick(event) {
-if (event.target.offsetParent !== null && event.target.offsetParent.viewClassName !== 'cdk-overlay-backdrop mat-overlay-transparent-backdrop cdk-overlay-backdrop-showing') {
-this.datepicker.open();
-  }
-this.datepicker.open();
-}*/
 }
 
 

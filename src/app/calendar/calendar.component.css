@@ -1,8 +1,30 @@
 .example-custom-date-class {
-    background: orange;
+    background: red;
+    border-color: 100%;
+  }
+  .example-custom-date-class1{
+    background: gray;
     border-color: 100%;
   }
  
 .cdk-overlay-container {
   pointer-events: auto !important;
+  zoom: 0.55;
+  height: 55% !important;
+  width: 55% !important;
+  margin: 10%;
+}
+.cdk-overlay-connected-position-bounding-box {
+  top: 10% !important;
+  
+}
+.mat-calendar-controls {
+  display: none !important;
+}
+.mat-calendar-header {
+  padding: 25px 8px 0 8px !important;
+}
+.mat-datapicker-content {
+  background-color: unset !important;
+  border: 3px solid black !important;
 }
