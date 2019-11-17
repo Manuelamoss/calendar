@@ -22,7 +22,7 @@
   display: none !important;
 }
 .mat-calendar-header {
-  padding: 25px 8px 0 8px !important;
+  padding: 25% 8% 0 8% !important;
 }
 .mat-datapicker-content {
   background-color: unset !important;

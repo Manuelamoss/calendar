@@ -25,17 +25,15 @@ export class CalendarComponent {
  myFilter = (d: Date) => {
   const day = d.getDay();
   // Prevent Saturday and Sunday from being selected.
-  
   //return day !== 0 && day !== 6 ? undefined :  'example-custom-date-class';
-if (day == 0){
-  return 'example-custom-date-class';
-}
-if (day == 6){
-return 'example-custom-date-class1';
-}
-
+    if (day == 0){
+      return 'example-custom-date-class';
+    }
+    else if (day == 6){
+    return 'example-custom-date-class1';
+    }
   }
-  // bank holidays reference varible of datepicker input
+  // TODO add bank holidays 
  
 
 
